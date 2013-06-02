@@ -58,5 +58,8 @@ module Deals8065
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # Had to do this for Devise & Heroku setup
+    config.assets.initialize_on_precompile = false
   end
 end

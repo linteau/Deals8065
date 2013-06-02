@@ -34,4 +34,12 @@ Deals8065::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # Makes devise work for some reason
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  #In production, :host should be set to the actual host of your application.
+  #config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+       
 end
