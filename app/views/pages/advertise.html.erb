@@ -1,2 +1,9 @@
 <h1>Pages#advertise</h1>
 <p>Find me in app/views/pages/advertise.html.erb</p>
+<% if current_user.try(:admin?) %>
+<li><%= link_to 'Edit Profile' , edit_user_registration_path %></li>
+<%else%>
+put this
+<% end %>
+
+<%= current_user.admin %>
