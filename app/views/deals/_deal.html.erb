@@ -1,0 +1,10 @@
+<% @deals.each do |deal| %>
+	<div class="box well">
+
+	  	<%= deal.name %>
+			<%= deal.shortDescription %>
+			<%= deal.price %>
+			<%= link_to 'Show', deal, :class => "btn btn-mini btn-primary" %>
+		
+	</div>
+<% end %>

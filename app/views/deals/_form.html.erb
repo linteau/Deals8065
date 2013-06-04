@@ -1,0 +1,32 @@
+<%= simple_form_for(@deal) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :shortDescription %>
+    <%= f.input :longDescription %>
+		<%= f.file_field :image %>
+    <%= f.input :detail1 %>
+    <%= f.input :detail2 %>
+    <%= f.input :detail3 %>
+    <%= f.input :detail4 %>
+    <%= f.input :detail5 %>
+    <%= f.input :detail6 %>
+    <%= f.input :detail7 %>
+    <%= f.input :saleStart %>
+    <%= f.input :saleEnd %>
+    <%= f.input :validStart %>
+    <%= f.input :validEnd %>
+    <%= f.input :price %>
+    <%= f.input :value %>
+    <%= f.input :businessName %>
+    <%= f.input :businessHours %>
+    <%= f.input :businessLocation %>
+    <%= f.input :businessContact %>
+    <%= f.input :voucherLimit %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, :class => "btn btn-primary" %>
+  </div>
+<% end %>

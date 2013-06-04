@@ -1,5 +1,7 @@
 Deals8065::Application.routes.draw do
   
+  resources :deals
+
   devise_for :users
 
   root :to => 'pages#home'

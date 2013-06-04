@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  shortDescription: MyString
+  longDescription: MyText
+  detail1: MyString
+  detail2: MyString
+  detail3: MyString
+  detail4: MyString
+  detail5: MyString
+  detail6: MyString
+  detail7: MyString
+  saleStart: 2013-06-04 19:02:31
+  saleEnd: 2013-06-04 19:02:31
+  validStart: 2013-06-04 19:02:31
+  validEnd: 2013-06-04 19:02:31
+  price: 1
+  value: 1
+  businessName: MyString
+  businessHours: MyString
+  businessLocation: MyText
+  businessContact: MyString
+  voucherLimit: 1
+
+two:
+  name: MyString
+  shortDescription: MyString
+  longDescription: MyText
+  detail1: MyString
+  detail2: MyString
+  detail3: MyString
+  detail4: MyString
+  detail5: MyString
+  detail6: MyString
+  detail7: MyString
+  saleStart: 2013-06-04 19:02:31
+  saleEnd: 2013-06-04 19:02:31
+  validStart: 2013-06-04 19:02:31
+  validEnd: 2013-06-04 19:02:31
+  price: 1
+  value: 1
+  businessName: MyString
+  businessHours: MyString
+  businessLocation: MyText
+  businessContact: MyString
+  voucherLimit: 1
