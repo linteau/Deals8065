@@ -1,10 +1,10 @@
 <% @deals.each do |deal| %>
-	<div class="box well">
-
-	  	<%= deal.name %>
+	<div class="box">
+			<%= image_tag deal.image.url(:medium) %>
+	  	<%= deal.name %><br>
 			<%= deal.shortDescription %>
 			<%= deal.price %>
-			<%= link_to 'Show', deal, :class => "btn btn-mini btn-primary" %>
-		
-	</div>
+			<%= link_to 'View', deal, :class => "btn btn-mini btn-primary pull-right", :style => "position:relative; top:10px" %>
+		</div>
+	
 <% end %>

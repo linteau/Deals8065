@@ -107,5 +107,6 @@
 
 <% if current_user.try(:admin?) %>
 <%= link_to 'Edit', edit_deal_path(@deal) %> |
+<%= link_to 'Destroy', @deal, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 <%= link_to 'Back', deals_path %>
