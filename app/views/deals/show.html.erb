@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+	<div class="well">
+		<%= image_tag @deal.image.url(:medium) %>
 
-<p>
-  <b>Name:</b>
+ 
   <%= @deal.name %>
-</p>
-
+	
 <!-- <p>
   <b>Shortdescription:</b>
   <%= @deal.shortDescription %>
@@ -14,7 +15,7 @@
   <b>Longdescription:</b>
   <%= @deal.longDescription %>
 </p>
-
+</div>
 <p>
   <b>Detail1:</b>
   <%= @deal.detail1 %>
@@ -110,3 +111,4 @@
 <%= link_to 'Destroy', @deal, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 <%= link_to 'Back', deals_path %>
+</div>

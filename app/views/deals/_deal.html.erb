@@ -1,10 +1,11 @@
 <% @deals.each do |deal| %>
 	<div class="box">
 			<%= image_tag deal.image.url(:medium) %>
-	  	<%= deal.name %><br>
-			<%= deal.shortDescription %>
-			<%= deal.price %>
-			<%= link_to 'View', deal, :class => "btn btn-mini btn-primary pull-right", :style => "position:relative; top:10px" %>
+			<%= deal.name %><br>
+			<div class="description-box">
+					<small>	<%= deal.shortDescription.truncate(80) %> </small>
+			</div>
+			<%= link_to 'View Deal', deal, :class => "btn btn-primary btn-primary pull-right", :style => "position:relative;" %>
+		<h2 class="pull-left" style="position:relative; line-height:15px">₱<%= deal.price %> </h2>		
 		</div>
-	
 <% end %>

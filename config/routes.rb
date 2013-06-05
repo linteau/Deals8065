@@ -4,7 +4,9 @@ Deals8065::Application.routes.draw do
 
   devise_for :users
 
-  root :to => 'pages#home'
+  root :to => 'deals#index'
+  
+  # get 'pages#home'
   
   get 'free' => "pages#free"
 

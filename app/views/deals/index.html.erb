@@ -1,70 +1,83 @@
-<h1>Listing deals</h1>
+<% if user_signed_in? %>
+	<h1>Today's deals</h1>
 
-<%= render 'deals/deal' %>
+	<%= render 'deals/deal' %>
 
 
-<!-- <table class="table table-striped">
-  <tr>
-    <th>Name</th>
-    <th>Shortdescription</th> -->
-    <!-- <th>Longdescription</th>
-    <th>Detail1</th>
-    <th>Detail2</th>
-    <th>Detail3</th>
-    <th>Detail4</th>
-    <th>Detail5</th>
-    <th>Detail6</th>
-    <th>Detail7</th>
-    <th>Salestart</th>
-    <th>Saleend</th>
-    <th>Validstart</th>
-    <th>Validend</th> -->
-    <!-- <th>Price</th> -->
-    <!-- <th>Value</th>
-    <th>Businessname</th>
-    <th>Businesshours</th>
-    <th>Businesslocation</th>
-    <th>Businesscontact</th>
-    <th>Voucherlimit</th> -->
-    <!-- <th></th>
-    <th></th>
-    <th></th>
-  </tr> -->
+	<!-- <table class="table table-striped">
+	  <tr>
+	    <th>Name</th>
+	    <th>Shortdescription</th> -->
+	    <!-- <th>Longdescription</th>
+	    <th>Detail1</th>
+	    <th>Detail2</th>
+	    <th>Detail3</th>
+	    <th>Detail4</th>
+	    <th>Detail5</th>
+	    <th>Detail6</th>
+	    <th>Detail7</th>
+	    <th>Salestart</th>
+	    <th>Saleend</th>
+	    <th>Validstart</th>
+	    <th>Validend</th> -->
+	    <!-- <th>Price</th> -->
+	    <!-- <th>Value</th>
+	    <th>Businessname</th>
+	    <th>Businesshours</th>
+	    <th>Businesslocation</th>
+	    <th>Businesscontact</th>
+	    <th>Voucherlimit</th> -->
+	    <!-- <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr> -->
 
-<!-- <% @deals.each do |deal| %>
-  <tr>
-    <td><%= deal.name %></td>
-    <td><%= deal.shortDescription %></td> -->
-    <!-- <td><%= deal.longDescription %></td>
-    <td><%= deal.detail1 %></td>
-    <td><%= deal.detail2 %></td>
-    <td><%= deal.detail3 %></td>
-    <td><%= deal.detail4 %></td>
-    <td><%= deal.detail5 %></td>
-    <td><%= deal.detail6 %></td>
-    <td><%= deal.detail7 %></td>
-    <td><%= deal.saleStart %></td>
-    <td><%= deal.saleEnd %></td>
-    <td><%= deal.validStart %></td>
-    <td><%= deal.validEnd %></td> -->
-    <!-- <td><%= deal.price %></td> -->
-    <!-- <td><%= deal.value %></td>
-    <td><%= deal.businessName %></td>
-    <td><%= deal.businessHours %></td>
-    <td><%= deal.businessLocation %></td>
-    <td><%= deal.businessContact %></td>
-    <td><%= deal.voucherLimit %></td> -->
-    <!-- <td><%= link_to 'Show', deal, :class => "btn btn-mini btn-primary"
- %></td>
-		<% if current_user.try(:admin?) %>
-    <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
-    <td><%= link_to 'Destroy', deal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-		<% end %>
-  </tr>
-<% end %>
-</table> -->
+	<!-- <% @deals.each do |deal| %>
+	  <tr>
+	    <td><%= deal.name %></td>
+	    <td><%= deal.shortDescription %></td> -->
+	    <!-- <td><%= deal.longDescription %></td>
+	    <td><%= deal.detail1 %></td>
+	    <td><%= deal.detail2 %></td>
+	    <td><%= deal.detail3 %></td>
+	    <td><%= deal.detail4 %></td>
+	    <td><%= deal.detail5 %></td>
+	    <td><%= deal.detail6 %></td>
+	    <td><%= deal.detail7 %></td>
+	    <td><%= deal.saleStart %></td>
+	    <td><%= deal.saleEnd %></td>
+	    <td><%= deal.validStart %></td>
+	    <td><%= deal.validEnd %></td> -->
+	    <!-- <td><%= deal.price %></td> -->
+	    <!-- <td><%= deal.value %></td>
+	    <td><%= deal.businessName %></td>
+	    <td><%= deal.businessHours %></td>
+	    <td><%= deal.businessLocation %></td>
+	    <td><%= deal.businessContact %></td>
+	    <td><%= deal.voucherLimit %></td> -->
+	    <!-- <td><%= link_to 'Show', deal, :class => "btn btn-mini btn-primary"
+	 %></td>
+			<% if current_user.try(:admin?) %>
+	    <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
+	    <td><%= link_to 'Destroy', deal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<% end %>
+	  </tr>
+	<% end %>
+	</table> -->
 
-<br />
-<% if current_user.try(:admin?) %>
-<%= link_to 'New Deal', new_deal_path %>
+				<div style="clear:both;"></div>
+
+	<% if current_user.try(:admin?) %>
+	<%= link_to 'New Deal', new_deal_path %>
+	<% end %>
+	
+<% else %>
+
+	<div class="hero-unit">
+	  <h1>Welcome to 8065 Deals!</h1>
+	  <p>Be apart of an exclusive group and get the deals you want.</p>
+	  <p>
+	  	<%= link_to "Sign Up", new_user_registration_path, :class => "btn btn-primary btn-large" %>
+	  </p>
+	</div>
 <% end %>

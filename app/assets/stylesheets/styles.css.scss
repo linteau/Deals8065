@@ -12,9 +12,8 @@
 	border-radius: 5px;
 	box-shadow: 1px 1px 10px #444;
 	width: 300px;
-	height:350px;
+	height:390px;
 }
-
 .box img{
 	display:blocks;
 	width: 100%;
@@ -22,3 +21,14 @@
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
+
+.description-box{	
+	margin-left:auto;
+	margin-right:auto;
+	height:40px;
+	width:280px;
+}
+.box h2{
+	color:orange;
+}
+
