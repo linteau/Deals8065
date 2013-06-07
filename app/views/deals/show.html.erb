@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-	<div class="well">
-		<%= image_tag @deal.image.url(:medium) %>
-
- 
-  <%= @deal.name %>
-	
+	<div class="well" style="width:600px; height:320px">	
+				<%= image_tag @deal.image.url(:medium), :class => 'pull-left' %>
+				<div class="pull-left">
+  			<h4><%= @deal.name %></h4>
+				 <h2 class="price"> <%= @deal.price %> </h2> <%= link_to "Get Deal", '#', :class => "btn btn-primary" %> 
+				</div>
+	</div>
+</div>	
 <!-- <p>
   <b>Shortdescription:</b>
   <%= @deal.shortDescription %>
