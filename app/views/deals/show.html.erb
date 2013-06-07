@@ -1,22 +1,36 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
 	<div class="well" style="width:600px; height:320px">	
-				<%= image_tag @deal.image.url(:medium), :class => 'pull-left' %>
-				<div class="pull-left">
-  			<h4><%= @deal.name %></h4>
-				 <h2 class="price"> <%= @deal.price %> </h2> <%= link_to "Get Deal", '#', :class => "btn btn-primary" %> 
-				</div>
+		<%= image_tag @deal.image.url(:medium), :class => 'pull-left' %>
+		<div class="pull-left" style="width:230px; padding:15px">
+	  	<h4><%= @deal.name %></h4>
+			<h2 class="price pull-left" style="line-height:15px"> ₱<%= @deal.price %> </h2> <%= link_to "Get Deal", '#', :class => "btn btn-primary btn-large pull-right" %> 
+			<div style="position:relative; top:30px; left:30px">
+				<table>
+					<tr>
+						<th>Value</td>
+						<th>Saving</td>
+						<th>Price</td>
+					</tr>
+					<tr>
+						<td><%= @deal.value %></td>
+						<td><%= '50 %' %></td>
+						<td><%= @deal.price %></td>
+					</tr>
+				</table>
+		</div>
+		<div style="position:relative; top:70px; left:30px">
+		  <%= @deal.longDescription %>
+		</div>
 	</div>
-</div>	
+</div>
+<div class="well" style="width:600px; height:320px">	
+</div>		
 <!-- <p>
   <b>Shortdescription:</b>
   <%= @deal.shortDescription %>
 </p> -->
 
-<p>
-  <b>Longdescription:</b>
-  <%= @deal.longDescription %>
-</p>
 </div>
 <p>
   <b>Detail1:</b>
