@@ -1,0 +1,29 @@
+<div class="well container" style="width:850px;">
+	<h3>Your Order</h3>
+	<div>
+		<table class="table table-striped">		
+			<tr>
+				<th>Description</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Total</th>
+			</tr>
+			<tr>
+				<td style="width:250px"><small> <%= @deal.longDescription %></small></td>
+				<td>
+					<select>
+					  <option value="1">1</option>
+					  <!-- <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4">4</option> -->
+					</select> 
+				</td>
+				<td><%= @deal.price %></td>
+				<td><%= @deal.price * 1 %></td>
+			</tr>
+		</table>
+		<%= link_to 'Print Deal', '#', :class => 'btn btn-primary btn-large pull-right'%>
+
+	</div>	
+	
+</div>

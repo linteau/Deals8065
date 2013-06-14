@@ -1,126 +1,13 @@
-<p id="notice"><%= notice %></p>
-<div class="container">
-	<div class="well show-box1">	
-		<%= image_tag @deal.image.url(:medium), :class => 'pull-left' %>
-		<div class="pull-left inner-show-box1">
-	  	<h4><%= @deal.name %></h4>
-			<h2 class="price pull-left"> ₱<%= @deal.price %> </h2> <%= link_to "Get Deal", '#', :class => "btn btn-primary btn-large pull-right" %> 
-			<div style="position:relative; top:30px; left:30px">
-				<table class="table table-striped">
-					<tr>
-						<th>Value</th>
-						<th>Saving</th>
-						<th>Price</th>
-					</tr>
-					<tr>
-						<td><%= @deal.value %></td>
-						<td><%= '50 %' %></td>
-						<td><%= @deal.price %></td>
-					</tr>
-				</table>
-		</div>
-		<div style="position:relative; top:30px; left:30px">
-		  <%= @deal.longDescription %>
-		</div>
-	</div>
-</div>
-<div class="well" style="width:600px; height:320px">	
-</div>		
+
+<%= render 'deals/showUpper'%>
+<%= render 'deals/showLower'%>
+
 <!-- <p>
   <b>Shortdescription:</b>
   <%= @deal.shortDescription %>
 </p> -->
 
 </div>
-<p>
-  <b>Detail1:</b>
-  <%= @deal.detail1 %>
-</p>
-
-<p>
-  <b>Detail2:</b>
-  <%= @deal.detail2 %>
-</p>
-
-<p>
-  <b>Detail3:</b>
-  <%= @deal.detail3 %>
-</p>
-
-<p>
-  <b>Detail4:</b>
-  <%= @deal.detail4 %>
-</p>
-
-<p>
-  <b>Detail5:</b>
-  <%= @deal.detail5 %>
-</p>
-
-<p>
-  <b>Detail6:</b>
-  <%= @deal.detail6 %>
-</p>
-
-<p>
-  <b>Detail7:</b>
-  <%= @deal.detail7 %>
-</p>
-
-<p>
-  <b>Salestart:</b>
-  <%= @deal.saleStart %>
-</p>
-
-<p>
-  <b>Saleend:</b>
-  <%= @deal.saleEnd %>
-</p>
-
-<p>
-  <b>Validstart:</b>
-  <%= @deal.validStart %>
-</p>
-
-<p>
-  <b>Validend:</b>
-  <%= @deal.validEnd %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @deal.price %>
-</p>
-
-<p>
-  <b>Value:</b>
-  <%= @deal.value %>
-</p>
-
-<p>
-  <b>Businessname:</b>
-  <%= @deal.businessName %>
-</p>
-
-<p>
-  <b>Businesshours:</b>
-  <%= @deal.businessHours %>
-</p>
-
-<p>
-  <b>Businesslocation:</b>
-  <%= @deal.businessLocation %>
-</p>
-
-<p>
-  <b>Businesscontact:</b>
-  <%= @deal.businessContact %>
-</p>
-
-<p>
-  <b>Voucherlimit:</b>
-  <%= @deal.voucherLimit %>
-</p>
 
 <% if current_user.try(:admin?) %>
 <%= link_to 'Edit', edit_deal_path(@deal) %> |

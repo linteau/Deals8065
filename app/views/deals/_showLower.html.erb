@@ -1,0 +1,56 @@
+
+<div class="well container" style="width:600px; height:320px">
+	<div class="pull-left" style="width:300px;position:relative;left:30px">
+		<h2 class="text-left">Goodies</h2>
+			<p><%= @deal.detail1 %></p>
+			<p><%= @deal.detail2 %></p>
+			<p><%= @deal.detail3 %></p>
+			<p><%= @deal.detail4 %></p>
+			<p><%= @deal.detail5 %></p>
+			<p><%= @deal.detail6 %></p>
+			<p><%= @deal.detail7 %></p>
+			
+			
+	</div>
+	<div class="pull-left" style="width:300px;">
+		<h2 class="text-left">Deal Details</h2>
+		<p>
+		  <b>Selling Period:</b>
+		  <%= @deal.saleStart.time.localtime.strftime("%m-%d-%Y") %> to <%= @deal.saleEnd.time.localtime.strftime("%m-%d-%Y") %>
+		</p>
+
+		<p>
+		  <b>Validity Period:</b>
+		  <%= @deal.validStart.time.localtime.strftime("%m-%d-%Y") %>
+			<%= @deal.validEnd.time.localtime.strftime("%m-%d-%Y") %>
+		</p>
+
+		<p>
+		  <b>Business name:</b>
+		  <%= @deal.businessName %>
+		</p>
+
+		<p>
+		  <b>Business hours:</b>
+		  <%= @deal.businessHours %>
+		</p>
+
+		<p>
+		  <b>Business location:</b>
+		  <%= @deal.businessLocation %>
+		</p>
+
+		<p>
+		  <b>Business contact:</b>
+		  <%= @deal.businessContact %>
+		</p>
+
+		<p>
+		  <b>Voucherlimit:</b>
+		  <%= @deal.voucherLimit %>
+		</p>
+	</div>
+		
+</div>
+
+

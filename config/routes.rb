@@ -8,7 +8,9 @@ Deals8065::Application.routes.draw do
   
   # get 'pages#home'
   
-  get 'free' => "pages#free"
+  get 'free' => "deals#free"
+  
+  get 'review' =>  'deals#orderReview'
 
   get 'contact' => "pages#contact"
 

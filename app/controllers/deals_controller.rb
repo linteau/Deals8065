@@ -9,10 +9,28 @@ class DealsController < ApplicationController
       format.json { render json: @deals }
     end
   end
+  
+  def free
+    @deals = Deal.all
 
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @deals }
+    end
+  end
+  
   # GET /deals/1
   # GET /deals/1.json
   def show
+    @deal = Deal.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @deal }
+    end
+  end
+  
+  def orderReview
     @deal = Deal.find(params[:id])
 
     respond_to do |format|

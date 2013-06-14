@@ -1,0 +1,34 @@
+	<div class="well show-box1 container">	
+		<%= image_tag @deal.image.url(:medium), :class => 'pull-left' %>
+		<div class="pull-left inner-show-box1">
+	  	<h4><%= @deal.name %></h4>
+			
+			<h2 class="price pull-left"> 
+				<% if @deal.price == 0 %>FREE
+				<% else %> 
+				₱<%= @deal.price %> 
+				<% end %>
+			</h2>
+			<%= link_to "Get Deal", { :controller => "deals", :action => "orderReview", :id => @deal }, :class => 'btn btn-primary btn-large pull-right' %>
+ 
+		
+			<div style="position:relative; top:30px; left:30px">
+				<table class="table table-striped">
+					<tr>
+						<th>Value</th>
+						<th>Saving</th>
+						<th>Price</th>
+					</tr>
+					<tr>
+						<td><%= @deal.value %></td>
+						<td><%= '50 %' %></td>
+						<td><%= @deal.price %></td>
+					</tr>
+				</table>
+		</div>
+		<div style="position:relative; top:30px; left:30px">
+		  <%= @deal.longDescription %>
+		</div>
+	</div>
+</div>
+

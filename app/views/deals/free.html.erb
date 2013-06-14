@@ -1,0 +1,14 @@
+<% @deals.each do |deal| %>	
+<% if deal.price == 0 %>
+<div class="box">
+		<%= image_tag deal.image.url(:medium) %>
+		<%= deal.name %><br>
+		<div class="description-box">
+				<small>	<%= deal.shortDescription.truncate(105) %> <%= deal.shortDescription.length %> </small>
+		</div>
+		<%= link_to 'View Deal', deal, :class => "btn btn-primary btn-primary pull-right", :style => "position:relative;" %>
+		<h2 class="pull-left" style="position:relative; line-height:15px">FREE </h2>		
+	
+	</div>
+<% end %>
+<% end %>
